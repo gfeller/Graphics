@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <canvas id="painting" ></canvas>
+      <script>
+          let painting = document.getElementById("painting");
+
+          painting.height = window.innerHeight;
+          painting.width = window.innerWidth;
+
+          let ctx = painting.getContext("2d");
+
+          ctx.beginPath();
+          ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+          ctx.moveTo(110, 75);
+          ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+          ctx.moveTo(65, 65);
+          ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+          ctx.moveTo(95, 65);
+          ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+          ctx.stroke();
+
+
+          ctx.beginPath();
+          ctx.moveTo(150,100);
+          ctx.lineTo(150,50);
+          ctx.moveTo(150,100);
+          ctx.moveTo(200,100);
+          ctx.arc(150,100, 50, 0, Math.PI);
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(150,100, 50, 0, Math.PI);
+          ctx.stroke();
+
+
+      </script>
+</body>
+</html>

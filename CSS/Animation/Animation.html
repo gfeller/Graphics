@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function addLabel(){
+            var label = document.createElement("div");
+            label.innerText = "BLABLA";
+            label.setAttribute("class", "element");
+            document.getElementById("container").appendChild(label);
+
+        }
+    </script>
+    <style>
+        .element {
+            animation: fadein 2s 1 linear;
+        }
+
+        @keyframes fadein {
+            0% {
+                position: relative;
+                left: -100px;
+                opacity: 0.2;
+            }
+
+            99% {
+                opacity: 0.2;
+                display: inline-block;            }
+
+            100% {
+                opacity: 1;
+                position: relative;
+                left: 0px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <button onclick="addLabel()">TEST</button>
+    <div id="container">
+
+    </div>
+</body>
+</html>

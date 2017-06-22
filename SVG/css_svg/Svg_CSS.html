@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .info{
+            fill: blue;
+        }
+        svg, object, img{
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 10 10">
+        <style>
+            .alert{
+                fill: red;
+            }
+            circle:hover{
+                fill: gray;
+                stroke: green;
+            }
+            @media print {
+                .alert{
+                    display: none;
+                }
+            }
+        </style>
+        <circle r="2" cx="4" cy="4" class="alert"></circle>
+        <circle r="2" cx="6" cy="6" class="info"></circle>
+        <circle r="2" cx="8" cy="8" class="alert"></circle>
+    </svg>
+    <object data="css_svg.svg">
+    </object>
+
+    <img src="css_svg.svg">
+
+</body>
+</html>

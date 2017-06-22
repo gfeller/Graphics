@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        svg{
+            width: 400px;
+
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body>
+    <svg id="svg" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin  meet">
+        <circle r="30" cx="100" cy="0" fill="yellow"></circle>
+        <rect width="100" height="10" y="90" fill="green"></rect>
+        <rect width="100" height="10" y="100" fill="brown"></rect>
+        <rect width="100" height="10" y="110" fill="black"></rect>
+        <rect width="100" height="10" y="120" fill="red"></rect>
+        <polygon points="10 100 10 80 20 60 30 80 30 100"></polygon>
+    </svg>
+
+    <script>
+        let x = y = 0;
+        let width =  height = 100;
+        document.addEventListener("keydown",  (e) =>  {
+            switch (e.key)
+            {
+                case "w":
+                    y += 1;
+                    break;
+                case "s":
+                    y -= 1;
+                    break;
+                case "d":
+                    x += 1;
+                    break;
+                case "a":
+                    x -= 1;
+                    break;
+                case "+":
+                    width -= 1;
+                    height -= 1;
+                    break;
+                case "-":
+                    width += 1;
+                    height += 1;
+                    break;
+
+            }
+            document.getElementById("svg").setAttribute("viewBox", `${x} ${y} ${width} ${height}`)
+
+            console.log(`${x} ${y} ${width} ${height}`);
+        });
+
+    </script>
+</body>
+</html>

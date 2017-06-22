@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+
+        canvas{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+      <canvas id="painting"></canvas>
+      <script>
+          let painting = document.getElementById("painting");
+          painting.height = window.innerHeight;
+          painting.width = window.innerWidth;
+          let ctx = painting.getContext("2d");
+
+
+          ctx.beginPath();
+          ctx.arc(55,55, 50, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.scale(2,4);
+
+          ctx.strokeStyle = "rgb(255,0,0)";
+          ctx.beginPath();
+          ctx.arc(55,55, 50, 0, 360);
+          ctx.stroke();
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <canvas id="painting">
+          Hello World Demo
+      </canvas>
+      <script>
+          var painting = document.getElementById("painting");
+          if(painting.getContext) {
+              var context = painting.getContext("2d");
+              context.fillRect(0, 0, 300, 150);
+          }
+      </script>
+</body>
+</html>

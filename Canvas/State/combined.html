@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+
+        canvas{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+      <canvas id="painting"></canvas>
+      <script>
+          let painting = document.getElementById("painting");
+          painting.height = window.innerHeight;
+          painting.width = window.innerWidth;
+          let ctx = painting.getContext("2d");
+
+
+          ctx.translate(50,50);
+          ctx.save();
+
+          ctx.fillRect(-5,-5,10,10);
+          ctx.translate(50,50);
+          ctx.rotate(Math.PI / 4);
+          ctx.fillStyle = "rgb(255,0,0)";
+          ctx.fillRect(-5,-5,10,10);
+          ctx.restore();
+
+          ctx.rotate(Math.PI / 4);
+          ctx.translate(50,50);
+          ctx.fillStyle = "rgb(255,0,255)";
+          ctx.fillRect(-5,-5,10,10);
+
+
+      </script>
+</body>
+</html>

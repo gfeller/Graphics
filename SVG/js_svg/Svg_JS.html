@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        svg{
+            width: 200px;
+        }
+    </style>
+<script>
+    function createCircle(){
+        var svgNS = "http://www.w3.org/2000/svg";
+        var myCircle = document.createElementNS(svgNS,"circle"); //to create a circle. for rectangle use "rectangle"
+        myCircle.setAttributeNS(null,"cx",Math.random() * 10);
+        myCircle.setAttributeNS(null,"cy",Math.random() * 10);
+        myCircle.setAttributeNS(null,"r",3);
+        myCircle.setAttributeNS(null,"fill","black");
+        myCircle.setAttributeNS(null,"stroke","none");
+        return myCircle;
+    }
+</script>
+</head>
+<body>
+    <svg viewBox="0 0 10 10">
+        <circle r="2" cx="4" cy="4" class="alert"></circle>
+    </svg>
+    <button onclick="document.getElementsByTagName('circle')[0].setAttribute('r', Math.random()*3)">Change size</button>
+    <button onclick="document.getElementsByTagName('svg')[0].appendChild(createCircle())">Add Circle</button>
+</body>
+</html>

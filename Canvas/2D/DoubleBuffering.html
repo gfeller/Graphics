@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<script>
+    Buffers[1-DrawingBuffer].style.visibility='hidden';
+    Buffers[DrawingBuffer].style.visibility='visible';
+
+    DrawingBuffer=1-DrawingBuffer;
+
+
+        var context = Buffers[DrawingBuffer].getContext('2d');
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 10 10">
+    <style>
+        .alert{
+        fill: red;
+        }
+        circle:hover{
+        fill: gray;
+        stroke: green;
+        }
+    </style>
+    <circle r="2" cx="4" cy="4" class="alert"></circle>
+    <circle r="2" cx="6" cy="6" class="info"></circle>
+    <circle r="2" cx="8" cy="8" class="alert"></circle>
+</svg>

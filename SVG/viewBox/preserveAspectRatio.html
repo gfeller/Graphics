@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        svg{
+            width: 400px;
+            height: 200px;
+            border:  1px black solid;
+        }
+
+        svg:hover{
+            overflow: visible
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" >
+        <circle r="50" cx="50" cy="50"></circle>
+    </svg>
+
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMaxYMin" >
+        <circle r="50" cx="50" cy="50"></circle>
+    </svg>
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+        <circle r="50" cx="50" cy="50"></circle>
+    </svg>
+
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+        <circle r="50" cx="50" cy="50"></circle>
+    </svg>
+
+
+
+
+
+</body>
+</html>
