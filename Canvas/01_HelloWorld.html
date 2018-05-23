@@ -10,7 +10,7 @@
       </canvas>
       <script>
           var painting = document.getElementById("painting");
-          if(painting.getContext) {
+          if(painting.getContext) { // überprüfen ob canvas vorfügbar ist.
               var context = painting.getContext("2d");
               context.fillRect(0, 0, 300, 150);
           }

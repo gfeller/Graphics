@@ -7,14 +7,14 @@ class CarBase {
         this.positionY = 100;
 
         this.length = length || 40;
-        this.height = height  || 40;
+        this.height = height || 40;
         this.keys = {};
 
 
         this.carCanvas = this.drawCar(this.renderer);
     }
 
-    getCanvas(){
+    getCanvas() {
         return this.carCanvas;
     }
 
@@ -23,7 +23,7 @@ class CarBase {
     }
 
     slowDown() {
-         this.speed > 0 ? this.speed =  this.speed - 0.10: this.speed =  this.speed - 0.2;
+        this.speed > 0 ? this.speed = this.speed - 0.10 : this.speed = this.speed - 0.2;
     }
 
     turnLeft() {
@@ -73,18 +73,18 @@ class CarBase {
         this.right = right;
         this.left = left;
 
-        document.addEventListener("keyup",  (e) =>  {
+        document.addEventListener("keyup", (e) => {
             this.keys[e.key] = false;
         });
-        document.addEventListener("keydown", (e) =>  {
+        document.addEventListener("keydown", (e) => {
             this.keys[e.key] = true;
         });
     }
 }
 
-class Car1 extends  CarBase {
+class Car1 extends CarBase {
     constructor(renderer) {
-        super(renderer,60, 40);
+        super(renderer, 60, 40);
     }
 
     drawCar() {
@@ -95,16 +95,16 @@ class Car1 extends  CarBase {
 
         let c1 = group.circle(wheelSize);
         c1.fill("red");
-        c1.x(wheelSize );
+        c1.x(wheelSize);
         c1.y(wheelSize);
-        c1.click(()=>alert("Hello World"));
+        c1.click(() => alert("Hello World"));
 
-         c1 = group.circle(wheelSize);
+        c1 = group.circle(wheelSize);
         c1.fill("red");
         c1.x(wheelSize);
-        c1.y(this.height -  wheelSize / 2);
+        c1.y(this.height - wheelSize / 2);
 
-         c1 = group.circle(wheelSize);
+        c1 = group.circle(wheelSize);
         c1.fill("red");
         c1.x(this.length - wheelSize * 2);
         c1.y(wheelSize);
@@ -112,10 +112,10 @@ class Car1 extends  CarBase {
         c1 = group.circle(wheelSize);
         c1.fill("red");
         c1.x(this.length - wheelSize * 2);
-        c1.y(this.height -  wheelSize / 2);
+        c1.y(this.height - wheelSize / 2);
 
 
-        let rect = group.rect(this.length,this.height - wheelSize / 2 * 3)
+        let rect = group.rect(this.length, this.height - wheelSize / 2 * 3)
         rect.fill("blue");
         rect.x(0);
         rect.y(wheelSize * 1.5);

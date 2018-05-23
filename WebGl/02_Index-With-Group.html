@@ -11,21 +11,21 @@
     <script>
         let x = y = z = 30;
 
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
-        var renderer = new THREE.WebGLRenderer();
+        const renderer = new THREE.WebGLRenderer();
         renderer.setSize( window.innerWidth, window.innerHeight );
         document.body.appendChild( renderer.domElement );
 
-        var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-        var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-        var material2 = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+        const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+        const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        const material2 = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
 
-        var center = new THREE.Mesh( geometry, material );
-        var cube = new THREE.Mesh( geometry, material );
-        var cube2 = new THREE.Mesh( geometry, material2 );
-        var cube3 = new THREE.Mesh( geometry, material2 );
+        const center = new THREE.Mesh( geometry, material );
+        const cube = new THREE.Mesh( geometry, material );
+        const cube2 = new THREE.Mesh( geometry, material2 );
+        const cube3 = new THREE.Mesh( geometry, material2 );
 
 
         cube.position.z = 10;
@@ -34,7 +34,7 @@
         center.position.x = 10;
         scene.add( center );
 
-        var group = new THREE.Group();
+        const group = new THREE.Group();
         group.add(cube2);
         group.add(cube3);
 
@@ -51,7 +51,7 @@
         camera.lookAt(new THREE.Vector3(0,0,0));
 
 
-        var render = function () {
+        const render = function () {
             camera.lookAt(new THREE.Vector3(0,0,0));
             renderer.render(scene, camera);
 
