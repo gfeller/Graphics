@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>WED3 - Canvas</title>
+		<meta name="robots" content="noindex, nofollow" />
+		<link rel="icon" href="./HSR.Template.Exercises/icon-document.png" type="image/png" />
+
+		<link rel="stylesheet" type="text/css" href="./HSR.Template.Exercises/documentStyle.css" />
+		<script src="HSR.Template.Exercises/solutions.js"></script>
+	</head>
+	<body>
+		<h1>WED3 - Canvas
+			<button id="showSolutions">Lösungen anzeigen/ausblenden</button>
+		</h1>
+
+		<h2>Canvas</h2>
+		<p>Ziel dieser Übung ist es, ein Car-Racing Game mit Canvas zu entwickeln.</p>
+		<img src="images/Racing.png" style="width: 500px">
+		<p>Die wesentlichen Code-Fragmente sind bereits vorgegeben.</p>
+		<p><a href="loesung/canvas/Game.html">Zum Ausprobieren</a></p>
+
+		<h2>Vorlage</h2>
+		<p>Nutzen Sie die <a href="Vorlage/Game.html">.\Vorlage</a> im entsprechenden Ordner.</p>
+		<p>Die Vorlage beinhaltet zwei HTML-Files:</p>
+		<ul>
+			<li>Car.html ist für Schritt 1.</li>
+			<li>Game.html für alle anderen Schritte.</li>
+		</ul>
+		<p>Im Folder "assets" sind die notwendigen Bilder vorhanden.</p>
+		<p>Die zu ergänzenden Code-Stellen sind mit TODO's markiert.</p>
+
+		<h2>Schritt 1: Auto</h2>
+		<p>Für diese Aufgabe benötigen Sie <a href="Vorlage/Car.html">Car.html</a> und <a href="Vorlage/car.js">car.js</a></p>
+		<p>Ihre Aufgabe ist es, das Aussehen der beiden Autos zu implementieren.</p>
+		<p>Implementieren Sie dafür die drawCar() Methode in den Klassen Car1 und Car2.</p>
+		<p>Sie können im <a href="Vorlage/Car.html">Car.html</a> ihre Autos "bestaunen".</p>
+
+		<h2>Schritt 2: Background (Rennstrecke & Grass)</h2>
+		<p>Playfield.js beinhaltet den Aufbau und die Logik vom Spielfeld.</p>
+		<p>Versuchen Sie die beiden Hintergründe assets/Grass.jpg und assets/Racing01.png zu laden und auf dem Spielfeld darzustellen.</p>
+
+
+		<h2>Schritt 3: Auto platzieren: drawField</h2>
+		<p>Die Spieler werden beim Initialisieren des Spielfelds erstellt. Die Autos der Spieler liegen im Array "cars".</p>
+		<p>Zeichnen Sie die Autos innerhalb von der drawField() Methode. Beachten Sie, dass die Koordinaten sowie den Winkel im Auto gespeichert sind.</p>
+
+		<h2>Schritt 4: Animieren</h2>
+		<p>Stellen Sie sicher, dass der Timer korrekt funktioniert.</p>
+		<p>Bei jedem Paint soll zuerst die Geschwindigkeit und Winkel berechnet werden (Tipp: handleKeys()) und anschliessend soll das Auto an die neue Position verschoben werden (Tipp: move()).</p>
+
+		<h2>Schritt 5: Kollession</h2>
+		<p>Das Auto soll gestoppt werden, falls dieses die Schwarze Fläche verlässt.</p>
+		<p>Die Kollision soll an der neuen Position überprüft werden.</p>
+		<p>Nutzen Sie dafür die handleFieldLimit() Methode.</p>
+
+		<h2>Schritt 6: Vergleichen</h2>
+		<p>Vergleichen Sie Ihre Lösung mit der abgegeben Lösung.</p>
+
+		<h2>Sonstiges</h2>
+		<p>Analysieren Sie wie das Key-Handling funktioniert.</p>
+		<p>Welche Konzepte / Ideen von der Vorlesung wurden angewendet?</p>
+		<div class="solution">
+			<ul>
+				<li>Layering</li>
+				<li>Pre-Rendering</li>
+			</ul>
+		</div>
+		<p>In der Lösung werden je nach Geschwindigkeit die Rück- oder Front-Lichter dargestellt. Versuchen Sie diese Feature nachzubauen.</p>
+		<p>Ändern Sie die Racing-Strecke von Racing01.png nach Racing02.svg. Sehen Sie einen Unterschied?</p>
+		<div class="solution">
+			<p>Bei der SVG-Variante sind die Kanten viel schöner.</p>
+		</div>
+		<p>Definieren Sie andere Auto-Typen.</p>
+		<p>Versuchen Sie den Code zu optimieren oder bringen Sie eigene Ideen ein.</p>
+
+		<h2>SVG</h2>
+		<p>Versuchen Sie die Ihre Lösung sofern möglich nach SVG zu portieren. Tipp: Nutzen Sie eine Library.</p>
+		<p>Vergleichen Sie Ihre Lösung mit der <a href="loesung/svg/Game.html">mögliche Lösung</a>.</p>
+	</body>
+</html>

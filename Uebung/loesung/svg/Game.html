@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Car Game</title>
+    <script src="canvasutil.js"></script>
+    <script src="car.js"></script>
+    <script src="playField.js"></script>
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.5.0/svg.js" integrity="sha256-M99cBo5V2Ov94TQIsw/ychx4i+l5CVGbpXqh5jGRgxA=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="playground" style="width: 100%; height: 100vh;"></div>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var field = new PlayField('playground', false );
+        });
+    </script>
+</body>
+</html>

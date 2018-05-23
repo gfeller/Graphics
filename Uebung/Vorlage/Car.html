@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Car Simulator</title>
+    <script src="car.js"></script>
+
+
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+            display: block;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car 1</h1>
+    <canvas id="car1" width="600" height="600"></canvas>
+    <h1>Car 2</h1>
+    <canvas id="car2" width="600" height="600"></canvas>
+
+    <script type="text/javascript">
+
+        function drawCar(carFn, canvasName)
+        {
+            let car = new carFn();
+
+            let canvas = document.getElementById(canvasName);
+            let context = canvas.getContext("2d");
+            canvas.width = car.length + 10;
+            canvas.height = car.height + 10;
+
+            context.fillStyle = 'rgb(0, 0, 0)';
+            context.drawImage(car.getCanvas(), 0,0, car.length, car.height,5,5, car.length, car.height);
+
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            drawCar(Car1, "car1");
+            drawCar(Car2, "car2");
+        });
+    </script>
+</body>
+</html>

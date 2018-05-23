@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Car Simulator</title>
+    <script src="car.js"></script>
+
+
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+            position: absolute
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="car" width="600" height="600"></canvas>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            let car = new Car2();
+
+            let canvas = document.getElementById('car');
+            let context = canvas.getContext("2d");
+            canvas.width = car.length + 10;
+            canvas.height = car.height + 10;
+
+            context.fillStyle = 'rgb(0, 0, 0)';
+            context.drawImage(car.getCanvas(), 0,0, car.length, car.height,5,5, car.length, car.height);
+        });
+    </script>
+</body>
+</html>

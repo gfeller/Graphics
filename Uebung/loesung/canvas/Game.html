@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Car Game</title>
+    <script src="canvasutil.js"></script>
+    <script src="car.js"></script>
+    <script src="playField.js"></script>
+
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+            position: absolute;
+            display: block;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="ground" width="600" height="600"></canvas>
+    <canvas id="playground" width="600" height="600"></canvas>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var field = new PlayField(window.innerWidth, window.innerHeight, document.getElementById('ground'), document.getElementById('playground'), true );
+        });
+    </script>
+</body>
+</html>
